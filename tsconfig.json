@@ -11,13 +11,17 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "allowSyntheticDefaultImports": true,
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@components/stencil": ["src/components/index.ts"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

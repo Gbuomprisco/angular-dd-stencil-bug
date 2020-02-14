@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "npm run build:stencil && ng serve --port 4500",
+    "build": "npm run build:stencil && ng build",
+    "build:stencil": "cd src/components && stencil build",
+    "build:stencil:watch": "cd src/components && stencil build --dev --watch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -13,6 +15,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.0-rc.0",
+    "@angular/cdk": "^9.0.0",
     "@angular/common": "~9.0.0-rc.0",
     "@angular/compiler": "~9.0.0-rc.0",
     "@angular/core": "~9.0.0-rc.0",
@@ -20,6 +23,7 @@
     "@angular/platform-browser": "~9.0.0-rc.0",
     "@angular/platform-browser-dynamic": "~9.0.0-rc.0",
     "@angular/router": "~9.0.0-rc.0",
+    "@stencil/core": "^1.8.8",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
